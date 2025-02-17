@@ -1,0 +1,16 @@
+[server]
+enableStaticServing = true
+
+[theme]
+primaryColor = "#000000"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#ffffff"
+sidebarBackgroundColor = "#f9f9f9"
+sidebarSecondaryBackgroundColor = "#f9f9f9"
+textColor = "#0d0d0d"
+linkColor = "#2a65aa"
+borderColor = "#e5e5e5"
+showBorderAroundInputs = true
+roundness = 0.31
+font = "ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol"
+codeFont = "ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace!important"
