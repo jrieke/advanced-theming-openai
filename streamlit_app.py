@@ -13,72 +13,96 @@ st.logo("https://cdn.worldvectorlogo.com/logos/openai-2.svg")
 st.title("OpenAI theme")
 
 if st.checkbox("Enable CSS hacks", True):
+    
+    linkUnderline = False
+    
+    codeBackgroundColor = "#f9f9f9"
+    codeBorderColor = "#d4d4d4"
+    
+    titleFontSize = "36px"
+    titleFontWeight = "700"
+    headerFontSize = "24px"
+    headerFontWeight = "600"
+    subheaderFontSize = "20px"
+    subheaderFontWeight = "600"
+    
+    activePageBackgroundColor = "#e3e3e3"
+    activePageHoverBackgroundColor = "#ececec"
+    pageHoverBackgroundColor = "#ececec"
+    pageFontSize = "14px"
+    pageFontWeight = "400"
+    pageHeaderFontSize = "12px"
+    
+    buttonBorderRadius = "1.6rem"
+    secondaryButtonBorderColor = "#d9d9d9"
+    secondaryButtonHoverBackgroundColor = "#ececec"
+    secondaryButtonHoverBorderColor = "#c9c9c9"
+    secondaryButtonTextColor = "inherit"
+    
     st.html(
-        """
+        f"""
         <style>
         
-        a {
-            text-decoration: none !important;
-        }
+        a {{
+            text-decoration: {"" if linkUnderline else "none"} !important;
+        }}
         
-        .stCode pre {
-            background-color: #f9f9f9;
-            border: 1px solid #d4d4d4;
-        }
+        .stCode pre {{
+            background-color: {codeBackgroundColor} !important;
+            border: 1px solid {codeBorderColor} !important;
+        }}
         
-        h1 {
-            font-size: 36px !important;
-            font-weight: 700 !important;
-        }
+        h1 {{
+            font-size: {titleFontSize} !important;
+            font-weight: {titleFontWeight} !important;
+        }}
         
-        h2 {
-            font-size: 24px !important;
-            font-weight: 600 !important;
-        }
+        h2 {{
+            font-size: {headerFontSize} !important;
+            font-weight: {headerFontWeight} !important;
+        }}
         
-        h3 {
-            font-size: 20px !important;
-            font-weight: 600 !important;
-        }
+        h3 {{
+            font-size: {subheaderFontSize} !important;
+            font-weight: {subheaderFontWeight} !important;
+        }}
         
         /* First page in sidebar nav */
-        [data-testid="stSidebarNav"] li:first-of-type a {
-            background-color: #e3e3e3 !important;
-        }
-        [data-testid="stSidebarNav"] li:first-of-type a:hover {
-            background-color: #ececec !important;
-        }
+        [data-testid="stSidebarNav"] li:first-of-type a {{
+            background-color: {activePageBackgroundColor} !important;
+        }}
+        [data-testid="stSidebarNav"] li:first-of-type a:hover {{
+            background-color: {activePageHoverBackgroundColor} !important;
+        }}
         
         /* Other pages in sidebar nav */
-        [data-testid="stSidebarNav"] li a:hover {
-            background-color: #ececec !important;
-        }
-        [data-testid="stSidebarNav"] li a span {
-            font-size: 14px !important;
-            font-weight: 400 !important;
-        }
+        [data-testid="stSidebarNav"] li a:hover {{
+            background-color: {pageHoverBackgroundColor} !important;
+        }}
+        [data-testid="stSidebarNav"] li a span {{
+            font-size: {pageFontSize} !important;
+            font-weight: {pageFontWeight} !important;
+        }}
         
         /* Headers in sidebar nav */
-        [data-testid="stSidebarNav"] header {
-            font-size: 12px !important;
-        }
+        [data-testid="stSidebarNav"] header {{
+            font-size: {pageHeaderFontSize} !important;
+        }}
         
         
-        .stButton button, .stDownloadButton button, .stLinkButton a, .stFormSubmitButton button {
-            border-radius: 1.6rem !important;
-        }
+        .stButton button, .stDownloadButton button, .stLinkButton a, .stFormSubmitButton button {{
+            border-radius: {buttonBorderRadius} !important;
+        }}
         
-        .stButton button[kind="secondary"], .stDownloadButton button[kind="secondary"], .stLinkButton a[kind="secondary"], .stFormSubmitButton button[kind="secondary"] {
-            border-color: #d9d9d9 !important;
-        }
+        .stButton button[kind="secondary"], .stDownloadButton button[kind="secondary"], .stLinkButton a[kind="secondary"], .stFormSubmitButton button[kind="secondary"] {{
+            border-color: {secondaryButtonBorderColor} !important;
+        }}
         
-        .stButton button[kind="secondary"]:hover, .stDownloadButton button[kind="secondary"]:hover, .stLinkButton a[kind="secondary"]:hover, .stFormSubmitButton button[kind="secondary"] {
-            background-color: #ececec !important;
-            border-color: #c9c9c9 !important;
-            color: inherit !important;
-        }
-        
-        
+        .stButton button[kind="secondary"]:hover, .stDownloadButton button[kind="secondary"]:hover, .stLinkButton a[kind="secondary"]:hover, .stFormSubmitButton button[kind="secondary"]:hover {{
+            background-color: {secondaryButtonHoverBackgroundColor} !important;
+            border-color: {secondaryButtonHoverBorderColor} !important;
+            color: {secondaryButtonTextColor} !important;
+        }}
         
         </style>
         """
