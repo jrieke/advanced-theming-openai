@@ -13,32 +13,30 @@ st.logo("https://cdn.worldvectorlogo.com/logos/openai-2.svg")
 st.title("OpenAI theme")
 
 if st.checkbox("Enable CSS hacks", True):
-    
     linkUnderline = False
-    
-    codeBackgroundColor = "#f9f9f9"
+
     codeBorderColor = "#d4d4d4"
-    
+
     titleFontSize = "36px"
     titleFontWeight = "700"
     headerFontSize = "24px"
     headerFontWeight = "600"
     subheaderFontSize = "20px"
     subheaderFontWeight = "600"
-    
+
     activePageBackgroundColor = "#e3e3e3"
     activePageHoverBackgroundColor = "#ececec"
     pageHoverBackgroundColor = "#ececec"
     pageFontSize = "14px"
     pageFontWeight = "400"
     pageHeaderFontSize = "12px"
-    
+
     buttonBorderRadius = "1.6rem"
     secondaryButtonBorderColor = "#d9d9d9"
     secondaryButtonHoverBackgroundColor = "#ececec"
     secondaryButtonHoverBorderColor = "#c9c9c9"
     secondaryButtonTextColor = "inherit"
-    
+
     st.html(
         f"""
         <style>
@@ -48,7 +46,6 @@ if st.checkbox("Enable CSS hacks", True):
         }}
         
         .stCode pre {{
-            background-color: {codeBackgroundColor} !important;
             border: 1px solid {codeBorderColor} !important;
         }}
         
@@ -107,7 +104,7 @@ if st.checkbox("Enable CSS hacks", True):
         </style>
         """
     )
-    
+
 
 def page1():
     pass
